@@ -15,15 +15,13 @@ function Vild(action)
   " Searches from the directory of the current file upwards until
   " it finds psbuild. 
   " py import vild
-  let fname = findfile("vild", ".;")
+  let fname = findfile("vild.yaml", ".;")
   if empty(fname) 
     echo "couldn't find vild" 
   else 
-    let buildfile = join(readfile(fname), '\n')
-    let cmd = matchstr(buildfile, a:action . '\m\s*\:\s*"\(\\"\|[^"]\)*"')
-    let cmd = substitute(cmd, a:action . '\s*\:\s*"', "", "")
-    let cmd = substitute(cmd, '"$', "", "")
-    let cmd = substitute(cmd, '\\"', '"', "")
+    let buildfile = join(readfile(fname), "\n")
+    let cmd = matchstr(buildfile, a:action . "\s*:\s*[^\n]*")
+    let cmd = substitute(cmd, a:action . '\s*\:\s*', "", "")
     execute cmd
   endif
 endfunction
