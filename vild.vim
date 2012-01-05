@@ -7,9 +7,7 @@ function Vild_build()
   call Vild("build")
 endfunction
 
-
 " Todo: Add support for templates-commands in vild files
-"       Change vild files to yaml
 
 function Vild(action) 
   " Searches from the directory of the current file upwards until
