@@ -5,7 +5,7 @@ Create a yaml file like so in a project directory:
 
       ---
       build: !javac *.java
-      run: java MyClass
+      run: !java MyClass
       # etc ...
       ---
 
