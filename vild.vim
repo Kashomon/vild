@@ -8,11 +8,9 @@ function Vild_build()
 endfunction
 
 " Todo: Add support for templates-commands in vild files
-
 function Vild(action) 
   " Searches from the directory of the current file upwards until
   " it finds psbuild. 
-  " py import vild
   let fname = findfile("vild.yaml", ".;")
   if empty(fname) 
     echo "couldn't find vild" 
