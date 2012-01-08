@@ -32,6 +32,6 @@ And you're good to go.
 Vild also has the ability for the user to provide references.
 
     ---
-    proj_root = /path/to/my/project/root 
-    export_project_root =  let g:my_project_root = $vild:proj_root
+    proj_root: /path/to/my/project/root 
+    export_project_root: let g:my_project_root = $vild:proj_root
     ---
