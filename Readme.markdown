@@ -36,6 +36,8 @@ Vild also has the ability for the user to provide references.
     export_project_root: let g:my_project_root = $vild:proj_root
     ---
 
-Be careful!  Vild will recursively fill out your references, and so it's easy
+Be careful!  
+
+Vild will recursively fill out your references, and so it's easy
 to create infinitely loops.  Watch out for circular references.
 
