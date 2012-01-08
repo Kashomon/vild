@@ -1,7 +1,5 @@
-" Mason File mason.vim:
-
-" build:
-" test: 
+" Copyright (C) 2011 by Joshua Hoak
+" Licensed under the MIT License 
 
 function Vild_build() 
   call Vild_Execute("build")
