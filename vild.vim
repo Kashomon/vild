@@ -38,7 +38,7 @@ function s:Replacer(cmd, buildfile)
     let next_cmd = matchstr(a:buildfile, to_find . "\s*:\s*[^\n]*")
     let next_cmd = substitute(next_cmd, to_find . '\s*\:\s*', "", "")
     let out = substitute(a:cmd, "\$vild\:[a-zA-Z_]*", next_cmd, "g")
-    return out
+    return s:Replacer(out, a:buildfile)
   else 
     return a:cmd
   endif 
